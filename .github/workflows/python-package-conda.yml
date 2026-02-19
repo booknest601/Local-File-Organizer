@@ -21,6 +21,14 @@ jobs:
     - name: Install dependencies
       run: |
         conda env update --file environment.yml --name base
+    from setuptools import setup, find_packages
+
+setup(
+    name="Local-File-Organizer",
+    version="0.1.0",
+    packages=find_packages(),
+    install_requires=[],
+)
     - name: Lint with flake8
       run: |
         conda install flake8
